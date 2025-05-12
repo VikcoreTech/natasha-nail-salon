@@ -34,14 +34,18 @@
       <div class="est">EST | 2020</div>
       <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
     </a>
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <i class="fa fa-bars"></i>
-    </button>
-    <nav class="nav-links" id="navMenu">
-      <a href="services.html">Services</a>
-      <a href="index.html#about">About Me</a>
-      <a href="faq.html">FAQ / Policy</a>
-      <a href="contact.html">Contact Us</a>
+    <div class="ham-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="off-screen-menu" id="navMenu">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="faq.html">FAQ / Policy</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -50,9 +54,8 @@
   <div class="full-width-image">
     <img src="./resources/css/images/main.jpg" alt="Decorative Background" />
     <div class="hero-text">
-      <h4>WELCOME TO ALF NAILS ART</h4>
+      <h4>WELCOME TO<br>ALF NAILS ART</h4>
       <h1>Premium European<br>Manicure Services</h1>
-      <p>Trained abroad by master nail artists, Natasha brings elite techniques to her salon.</p>
       <a href="#book" class="cta-button">BOOK NOW</a>
     </div>
   </div>
@@ -60,16 +63,16 @@
   <!-- About Section -->
   <section class="two-column">
     <div class="column">
-      <h2>About Me</h2>
+      <img src="./resources/css/images/natasha.jpg" alt="About Me">
+    </div>
+    <div class="column">
+      <h2 class="about">About Me</h2>
       <p>
         With over a decade of experience and international training, Natasha brings the art of the Russian manicure to her clients with precision and care. Her attention to detail and passion for perfection have made her salon one of the most trusted in the area.
       </p>
       <p>
         Whether you're looking for a natural look or something bold, Natasha customizes each service to meet your style and needs.
       </p>
-    </div>
-    <div class="column">
-      <img src="./resources/css/images/natasha.jpg" alt="About Me">
     </div>
   </section>
 <!-- Fullscreen Modal -->
