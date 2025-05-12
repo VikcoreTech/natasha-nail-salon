@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alf nails art</title>
+  <title>Alf Nails Art</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,146 +27,161 @@
   </div>
 
   <!-- Main Navbar -->
-  <main>
-<div class="main-navbar">
-  <a href="index.html" class="logo">
-    <div class="brand-name">ALF NAILS ART</div>
-    <div class="est">EST | 2020</div>
-    <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
-  </a>
-    <button class="menu-toggle" onclick="toggleMenu()">
+  <header>
+    <div class="main-navbar">
+      <a href="index.html" class="logo">
+        <div class="brand-name">ALF NAILS ART</div>
+        <div class="est">EST | 2020</div>
+        <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
+      </a>
+      <button class="menu-toggle" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
-    </button>
-
-  <nav class="nav-links" id="navMenu">
-    <a href="services.html">Services</a>
-    <a href="index.html#about">About Me</a> <!-- Updated link -->
-    <a href="gallery.html">FAQ / Policy</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
+      </button>
+      <nav class="nav-links" id="navMenu">
+        <a href="services.html">Services</a>
+        <a href="index.html#about">About Me</a>
+        <a href="gallery.html">FAQ / Policy</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
     </div>
   </header>
-    <div class="full-width-image">
-        <img src="./resources/css/images/stick.jpg" alt="Decorative Background" />
-        <div class="hero-text">
-    <main>
-  <div class="services-page">
-    <h1 class="price-list-title">Services</h1>
-    <div class="services-container">
-      <!-- Left Side: Images -->
-      <div class="services-images">
-        <div class="slideshow-container">
-          <div class="slide fade">
-            <img src="./resources/css/images/1.jpg" alt="Nail Art 1" />
-          </div>
-          <div class="slide fade">
-            <img src="./resources/css/images/2.jpg" alt="Nail Art 2" />
-          </div>
-          <div class="slide fade">
-            <img src="./resources/css/images/3.jpg" alt="Nail Art 3" />
-          </div>
-          <div class="slide fade">
-            <img src="./resources/css/images/4.jpg" alt="Nail Art 4" />
-          </div>
-        </div>
-        <!-- Navigation Dots -->
-        <div class="dots-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-      </div>
 
-      <!-- Right Side: Details -->
-      <div class="services-details">
-        <h2 class="service-title">Manicure</h2>
-        <!-- Pricing Table -->
-        <div class="pricing-table">
-          <div class="pricing-row">
-            <span class="pricing-label">GEL MANICURE</span>
-            <span class="pricing-price">80$</span>
+  <!-- Hero Section -->
+  <div class="selection-image">
+    <img src="./resources/css/images/stick.jpg" alt="Decorative Background" />
+  </div>
+
+  <!-- Services Page -->
+  <main>
+    <div class="services-page">
+      <h1 class="price-list-title">Services</h1>
+      <div class="services-container">
+
+        <!-- Left Side: Images -->
+        <div class="services-images">
+          <div class="services-slideshow-container">
+            <div class="services-slide fade">
+              <img src="./resources/css/images/1.jpg" alt="Nail Art 1">
+            </div>
+            <div class="services-slide fade">
+              <img src="./resources/css/images/2.jpg" alt="Nail Art 2">
+            </div>
+            <div class="services-slide fade">
+              <img src="./resources/css/images/3.jpg" alt="Nail Art 3">
+            </div>
           </div>
-          <div class="pricing-row">
-            <span class="pricing-label">GEL REMOVAL + MANICURE</span>
-            <span class="pricing-price">70$</span>
-          </div>
-          <div class="pricing-row">
-            <span class="pricing-label">BASIC MANICURE</span>
-            <span class="pricing-price">65$</span>
+          <!-- Navigation Dots -->
+          <div class="services-dots-container">
+            <span class="services-dot" onclick="currentServicesSlide(1)"></span>
+            <span class="services-dot" onclick="currentServicesSlide(2)"></span>
+            <span class="services-dot" onclick="currentServicesSlide(3)"></span>
           </div>
         </div>
 
-        <h2 class="service-add-on">Add-ons</h2>
-        <div class="pricing-table">
-          <div class="pricing-row">
-            <span class="pricing-label">GEL REMOVAL</span>
-            <span class="pricing-price">20$</span>
+        <!-- Right Side: Details -->
+        <div class="services-details">
+          <h2 class="service-title">Manicure</h2>
+          <div class="pricing-table">
+            <div class="pricing-row">
+              <span class="pricing-label">GEL MANICURE</span>
+              <span class="pricing-price">80$</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">GEL REMOVAL + MANICURE</span>
+              <span class="pricing-price">70$</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">BASIC MANICURE</span>
+              <span class="pricing-price">65$</span>
+            </div>
           </div>
-          <div class="pricing-row">
-            <span class="pricing-label">NAIL FIX</span>
-            <span class="pricing-price">5$</span>
-          </div>
-        </div>
 
-        <h2 class="service-title">Pedicure</h2>
-        <div class="pricing-table">
-          <div class="pricing-row">
-            <span class="pricing-label">BASIC PEDICURE</span>
-            <span class="pricing-price">50$</span>
+          <h2 class="service-add-on">Add-ons</h2>
+          <div class="pricing-table">
+            <div class="pricing-row">
+              <span class="pricing-label">GEL REMOVAL</span>
+              <span class="pricing-price">20$</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">NAIL FIX</span>
+              <span class="pricing-price">5$</span>
+            </div>
           </div>
-          <div class="pricing-row">
-            <span class="pricing-label">SPA PEDICURE</span>
-            <span class="pricing-price">70$</span>
-          </div>
-          <div class="pricing-row">
-            <span class="pricing-label">DELUXE PEDICURE</span>
-            <span class="pricing-price">90$</span>
-          </div>
-        </div>
 
-        <h2 class="service-add-on">Add-ons for Pedicure</h2>
-        <div class="pricing-table">
-          <div class="pricing-row">
-            <span class="pricing-label">PARAFFIN TREATMENT</span>
-            <span class="pricing-price">25$</span>
+          <h2 class="service-title">Pedicure</h2>
+          <div class="pricing-table">
+            <div class="pricing-row">
+              <span class="pricing-label">BASIC PEDICURE</span>
+              <span class="pricing-price">50$</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">SPA PEDICURE</span>
+              <span class="pricing-price">70$</span>
+            </div>
+            <div class="pricing-row">
+              <span class="pricing-label">DELUXE PEDICURE</span>
+              <span class="pricing-price">90$</span>
+            </div>
           </div>
-          <div class="pricing-row">
-            <span class="pricing-label">NAIL ART</span>
-            <span class="pricing-price">15$</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
+
+  <!-- Scripts -->
   <script>
-    // Add this script to ensure the menu toggle works
     function toggleMenu() {
       const navMenu = document.getElementById('navMenu');
       navMenu.classList.toggle('active');
     }
   </script>
   <script>
-  let slideIndex = 0;
-  showSlides();
+    let servicesSlideIndex = 0;
+    showServicesSlides();
 
-  function showSlides() {
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-    slides.forEach((slide) => (slide.style.display = "none"));
-    dots.forEach((dot) => dot.classList.remove("active"));
-    slideIndex++;
-    if (slideIndex > slides.length) slideIndex = 1;
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
-    setTimeout(showSlides, 4000); // Change slide every 3 seconds
-  }
+    function showServicesSlides() {
+      const slides = document.querySelectorAll(".services-slide");
+      const dots = document.querySelectorAll(".services-dot");
+      slides.forEach((slide) => (slide.style.display = "none"));
+      dots.forEach((dot) => dot.classList.remove("active"));
+      servicesSlideIndex++;
+      if (servicesSlideIndex > slides.length) servicesSlideIndex = 1;
+      slides[servicesSlideIndex - 1].style.display = "block";
+      dots[servicesSlideIndex - 1].classList.add("active");
+      setTimeout(showServicesSlides, 3000);
+    }
 
-  function currentSlide(n) {
-    slideIndex = n - 1;
-    showSlides();
-  }
-</script>
+    function currentServicesSlide(n) {
+      servicesSlideIndex = n - 1;
+      showServicesSlides();
+    }
+  </script>
 </body>
+<footer>
+  <div class="footer-content">
+    <!-- Left Section: Logo and Description -->
+    <div class="footer-section footer-logo">
+      <a href="index.html" class="logo">
+        <div class="est">EST | 2025</div>
+        <div class="brand-name">ALF NAILS ART</div>
+        <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
+      </a>
+      </p>
+    </div>
+
+    <!-- Right Section: Location -->
+    <div class="footer-section footer-location">
+      <h3 class="footer-title">Our Location</h3>
+      <p><i class="fa fa-map-marker"></i> 4200 N Lamar Blvd, Suite 150, Austin, TX, 78556</p>
+      <p><i class="fa fa-phone"></i> (737) 727-00-87</p>
+      <p><i class="fa fa-clock-o"></i> Mon - Sat 09:00am - 06:00pm</p>
+    </div>
+  </div>
+
+  <p class="footer-copyright">
+    &copy; 2025 Alf Nails Art. All rights reserved.
+  </p>
+</footer>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alf nails art</title>
+  <title>Alf Nails Art</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,103 +27,180 @@
   </div>
 
   <!-- Main Navbar -->
-  <main>
-<div class="main-navbar">
-  <a href="index.html" class="logo">
-    <div class="brand-name">ALF NAILS ART</div>
-    <div class="est">EST | 2020</div>
-    <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
-  </a>
-    <button class="menu-toggle" onclick="toggleMenu()">
-        <i class="fa fa-bars"></i>
-    </button>
-
-  <nav class="nav-links" id="navMenu">
-    <a href="services.html">Services</a>
-    <a href="#about">About Me</a> <!-- Anchor link to the About section -->
-    <a href="gallery.html">FAQ / Policy</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
-
-</div>
-
-
-    <div class="full-width-image">
-      <img src="/resources/css/images/main1.jpg" alt="Decorative Background" />
-      <div class="hero-text">
-        <h4>WELCOME TO ALF NAILS ART</h4>
-        <h1>Premium European<br>Manicure services</h1>
-        <p>Trained abroad by master nail artists, Natasha brings elite techniques to her salon.</p>
-        <a href="#book" class="cta-button">BOOK NOW</a>
-      </div>
-
-    </div>
-        <section class="about-section" id="about">
-      <div class="about-image">
-        <img src="./resources/css/images/natasha.jpg" alt="About Me">
-      </div>
-      <div class="about-text">
-        <h2 class="about">About Me</h2>
-        <p>
-          With over a decade of experience and international training, Natasha brings the art of the Russian manicure to her clients with precision and care. Her attention to detail and passion for perfection have made her salon one of the most trusted in the area.
-        </p>
-        <p>
-          Whether you're looking for a natural look or something bold, Natasha customizes each service to meet your style and needs.
-        </p>
-      </div>
-    </section>
-    
-    <section class="manicure-showcase">
-      <div class="manicure-card">
-        <img src="./resources/css/images/photo_2025-05-11_12-02-41.jpg" alt="Classic Manicure">
-        <h3>Classic Manicure</h3>
-        <p>Clean, elegant, and timeless looks for any occasion.</p>
-      </div>
-      <div class="manicure-card">
-        <img src="./resources/css/images/photo_2025-05-11_12-03-18.jpg" alt="Gel Manicure">
-        <h3>Gel Manicure</h3>
-        <p>Long-lasting shine with vibrant color options.</p>
-      </div>
-      <div class="manicure-card">
-        <img src="./resources/css/images/photo_2025-05-11_12-03-34.jpg" alt="French Tips">
-        <h3>French Tips</h3>
-        <p>Chic and modern styles with a European twist.</p>
-      </div>
-    </section>
-  </main>
-  <script>
-  function toggleMenu() {
-    const nav = document.getElementById('navMenu');
-    nav.classList.toggle('show');
-  }
-</script>
-
-</body>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-section footer-logo">
-      <div class="est">EST | 2020</div>
-      <div class="brand-name">ALF NAILS ART</div>
-      <div class="subtext">PROFESSIONAL<br>NAIL SALON</div>
-    </div>
-
-    <div class="footer-section footer-nav">
-      <p class="location">Our Location</p>
-      <a href="https://maps.google.com/?q=4200+N+Lamar+BLVD">
-        <i class="fa fa-map-marker"></i> 542 E Avenue J
+  <header>
+    <div class="main-navbar">
+      <a href="index.html" class="logo">
+        <div class="brand-name">ALF NAILS ART</div>
+        <div class="est">EST | 2020</div>
+        <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
       </a>
-      <a href="tel:+12243834135"><i class="fa fa-phone"></i> (224) 383-4135</a>
-      <span><i class="fa fa-clock-o"></i> Tue – Sat: 09:00am – 05:00pm</span>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <nav class="nav-links" id="navMenu">
+        <a href="services.html">Services</a>
+        <a href="index.html#about">About Me</a>
+        <a href="gallery.html">FAQ / Policy</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="footer-section footer-social">
-      <p>Follow Us</p>
-      <a href="https://instagram.com/YOUR_HANDLE" target="_blank"><i class="fa fa-instagram"></i> Instagram</a><br>
-      <a href="https://facebook.com/YOUR_PAGE" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+  <!-- Hero Section -->
+  <div class="full-width-image">
+    <img src="./resources/css/images/main.jpg" alt="Decorative Background" />
+    <div class="hero-text">
+      <h4>WELCOME TO ALF NAILS ART</h4>
+      <h1>Premium European<br>Manicure Services</h1>
+      <p>Trained abroad by master nail artists, Natasha brings elite techniques to her salon.</p>
+      <a href="#book" class="cta-button">BOOK NOW</a>
     </div>
   </div>
-  <p style="text-align: right; padding: 10px 0; color: white;">&copy; 2023 Natasha's Nail Salon. All rights reserved.</p>
-</footer>
 
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-image">
+      <img src="./resources/css/images/natasha.jpg" alt="About Me">
+    </div>
+    <div class="about-text">
+      <h2 class="about">About Me</h2>
+      <p>
+        With over a decade of experience and international training, Natasha brings the art of the Russian manicure to her clients with precision and care. Her attention to detail and passion for perfection have made her salon one of the most trusted in the area.
+      </p>
+      <p>
+        Whether you're looking for a natural look or something bold, Natasha customizes each service to meet your style and needs.
+      </p>
+    </div>
+  </section>
+  <!-- Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="./resources/css/images/slide1.jpg" alt="Slide 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="./resources/css/images/slide2.jpg" alt="Slide 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="./resources/css/images/slide3.jpg" alt="Slide 3">
+      </div>
+      <div class="carousel-slide">
+        <img src="./resources/css/images/slide4.jpg" alt="Slide 4">
+      </div>
+      <div class="carousel-slide">
+        <img src="./resources/css/images/slide5.jpg" alt="Slide 5">
+      </div>
+    </div>
+    <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('show');
+    }
+
+    let homepageSlideIndex = 0;
+    showHomepageSlides();
+
+    function showHomepageSlides() {
+      const slides = document.querySelectorAll(".homepage-slide");
+      const dots = document.querySelectorAll(".homepage-dot");
+      slides.forEach((slide) => (slide.style.display = "none"));
+      dots.forEach((dot) => dot.classList.remove("active"));
+      homepageSlideIndex++;
+      if (homepageSlideIndex > slides.length) homepageSlideIndex = 1;
+      slides[homepageSlideIndex - 1].style.display = "block";
+      dots[homepageSlideIndex - 1].classList.add("active");
+      setTimeout(showHomepageSlides, 3000); // Change slide every 3 seconds
+    }
+
+    function currentHomepageSlide(n) {
+      homepageSlideIndex = n - 1;
+      showHomepageSlides();
+    }
+  </script>
+
+  <script>
+    let currentSlideIndex = 0;
+
+    function updateSlides() {
+      const slides = document.querySelectorAll(".slide");
+      slides.forEach((slide, index) => {
+        slide.classList.remove("active", "prev", "next");
+        if (index === currentSlideIndex) {
+          slide.classList.add("active");
+        } else if (index === (currentSlideIndex - 1 + slides.length) % slides.length) {
+          slide.classList.add("prev");
+        } else if (index === (currentSlideIndex + 1) % slides.length) {
+          slide.classList.add("next");
+        }
+      });
+    }
+
+    function showNextSlide() {
+      const slides = document.querySelectorAll(".slide");
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      updateSlides();
+    }
+
+    function showPrevSlide() {
+      const slides = document.querySelectorAll(".slide");
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+      updateSlides();
+    }
+  </script>
+
+  <script>
+    let currentIndex = 0;
+
+    function moveCarousel(direction) {
+      const track = document.querySelector(".carousel-track");
+      const slides = document.querySelectorAll(".carousel-slide");
+      const totalSlides = slides.length;
+
+      // Calculate the new index
+      currentIndex += direction;
+
+      // Wrap around if the index goes out of bounds
+      if (currentIndex < 0) {
+        currentIndex = totalSlides - 3; // Show the last 3 slides
+      } else if (currentIndex > totalSlides - 3) {
+        currentIndex = 0; // Reset to the first slide
+      }
+
+      // Move the track
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+  </script>
+
+</body>
+<footer>
+  <div class="footer-content">
+    <!-- Left Section: Logo and Description -->
+    <div class="footer-section footer-logo">
+      <a href="index.html" class="logo">
+        <div class="est">EST | 2025</div>
+        <div class="brand-name">ALF NAILS ART</div>
+        <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
+      </a>
+      </p>
+    </div>
+
+    <!-- Right Section: Location -->
+    <div class="footer-section footer-location">
+      <h3 class="footer-title">Our Location</h3>
+      <p><i class="fa fa-map-marker"></i> 4200 N Lamar Blvd, Suite 150, Austin, TX, 78556</p>
+      <p><i class="fa fa-phone"></i> (737) 727-00-87</p>
+      <p><i class="fa fa-clock-o"></i> Mon - Sat 09:00am - 06:00pm</p>
+    </div>
+  </div>
+
+  <p class="footer-copyright">
+    &copy; 2025 Alf Nails Art. All rights reserved.
+  </p>
+</footer>
 </html>
