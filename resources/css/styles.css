@@ -234,6 +234,7 @@ footer {
 .footer-section .location {
   font-weight: bold;
 }
+/* Default hidden state for the mobile menu */
 .nav-links {
   display: none;
   flex-direction: column;
@@ -247,103 +248,12 @@ footer {
   z-index: 1000;
 }
 
+/* Show the menu when the 'show' class is added */
 .nav-links.show {
   display: flex;
 }
 
-.nav-links a {
-  position: relative;
-  padding: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-/* Add vertical line between links */
-.nav-links a:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 20px;
-  width: 1px;
-  background-color: #ccc;
-}
-
-/* ===== RESPONSIVE BREAKPOINTS ===== */
-@media (min-width: 600px) {
-  .main-navbar {
-    padding: 20px 60px;
-  }
-
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-}
-/* Hide the toggle by default on desktop */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Stack nav vertically for mobile */
-@media (max-width: 768px) {
-  .main-navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .slideshow-container {
-    width: 100%; /* Make the slideshow take the full width of the screen */
-    height: auto; /* Adjust height automatically */
-  }
-
-  .slide img {
-    height: auto; /* Ensure the image scales properly */
-  }
-}
-
-@media (min-width: 1024px) {
-  .main-navbar {
-    padding: 30px 100px;
-    display: flex;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .footer-section {
-    flex: 1;
-    margin: 10px 20px;
-  }
-}
-
+/* Ensure the menu is always visible on larger screens */
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
@@ -762,59 +672,56 @@ footer {
   object-position: center; /* Centers the image within the container */
   image-rendering: auto; /* Ensures the image is rendered smoothly */
 }
-/* Carousel Container */
-.carousel-container {
-  position: relative;
-  width: 90%; /* Increase the width of the carousel */
-  margin: auto;
-  overflow: hidden;
-  margin-bottom: 40px; /* Add more spacing below */
-  margin-top: 40px; /* Add more spacing above */
-}
-
-.carousel-track {
+/* Gallery Container */
+.gallery-container {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.carousel-slide {
-  flex: 0 0 33.33%; /* Show 3 slides at a time */
-  box-sizing: border-box;
-  padding: 20px; /* Increase padding for better spacing */
-}
-
-.carousel-slide img {
-  width: 100%; /* Ensure the image fills the slide */
-  height: 600px; /* Double the height of the images */
-  object-fit: cover; /* Crop the image to fit the dimensions */
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Increase shadow for emphasis */
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px 30px; /* Increase button size */
+/* Gallery Items (Narrow Slits) */
+.gallery-item {
+  width: 60px; /* Narrow slit width */
+  height: 80px;
+  overflow: hidden;
   cursor: pointer;
-  z-index: 10;
-  font-size: 20px; /* Increase font size */
-  border-radius: 5px;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
-.carousel-button.prev {
-  left: 20px; /* Adjust button position */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.carousel-button.next {
-  right: 20px; /* Adjust button position */
+/* Expanded Image */
+.gallery-item.expanded {
+  width: 300px; /* Full width when clicked */
+  height: auto;
 }
 
-.carousel-button:hover {
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Optional: Adding hover effect */
+.gallery-item:hover {
+  opacity: 0.8;
 }
 
 /* ===== FAQ Section ===== */
