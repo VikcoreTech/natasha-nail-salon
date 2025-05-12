@@ -53,14 +53,32 @@ function showSlides(n) {
   let i;
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("demo");
+
+  // Loop back to the first slide if n exceeds the number of slides
   if (n > slides.length) { slideIndex = 1 }
+  // Loop back to the last slide if n is less than 1
   if (n < 1) { slideIndex = slides.length }
+
+  // Hide all slides
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
+  // Remove the "active" class from all thumbnails
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
+  // Show the current slide and highlight the corresponding thumbnail
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+const aboutMePicture = document.querySelector('.about-me-picture');
+
+// Remove any dynamically added classes
+aboutMePicture.classList.remove('highlight');
+
+// Remove any event listeners (if applicable)
+aboutMePicture.onmouseover = null;
+aboutMePicture.onmouseout = null;

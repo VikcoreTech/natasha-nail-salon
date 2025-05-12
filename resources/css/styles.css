@@ -841,9 +841,13 @@ footer {
   padding: 40px 20px;
 }
 
-.two-column .column {
-  flex: 1;
-  min-width: 300px;
+.about-me-picture {
+  width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove any shadow */
+  object-fit: cover; /* Ensure the image scales proportionally */
+  object-position: center; /* Center the image */
 }
 
 .two-column img {
@@ -1009,4 +1013,81 @@ footer {
 /* Active thumbnail */
 .active, .demo:hover {
   opacity: 1;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Full-width images */
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ensure all images in .mySlides are the same size */
+.mySlides img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 70vh; /* Set a consistent height (adjust as needed) */
+  object-fit: cover; /* Scale the image proportionally and crop if necessary */
+  object-position: center; /* Center the image within the container */
+}
+
+/* Thumbnail images */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.column img {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.column img:hover, .demo.active {
+  opacity: 1;
+}
+
+/* Two-column layout */
+.two-column {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Vertically align items */
+  gap: 20px; /* Add space between the columns */
+  padding: 20px; /* Add padding around the section */
+}
+
+/* Left column: Image */
+.image-column {
+  flex: 1; /* Take up equal space */
+  max-width: 50%; /* Limit the width to 50% */
+}
+
+.image-column img {
+  width: 100%; /* Make the image responsive */
+  height: 80vh; /* Maintain aspect ratio */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  padding: 40px 20px;
+}
+
+/* Right column: Text */
+.text-column {
+  flex: 1; /* Take up equal space */
+  max-width: 50%; /* Limit the width to 50% */
+}
+
+.text-column h2 {
+  font-size: 2rem; /* Adjust heading size */
+  margin-bottom: 15px;
+  color: #333; /* Text color */
+}
+
+.text-column p {
+  font-size: 1rem; /* Adjust paragraph size */
+  line-height: 1.6; /* Improve readability */
+  color: #555; /* Text color */
 }
