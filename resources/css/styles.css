@@ -38,7 +38,11 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+.logo-branding {
+  align-items: center;
+  width: 50vh;
+  height: 50vh;
+}
 .top-left,
 .top-right {
   display: flex;
@@ -51,13 +55,21 @@ img {
   display: flex;
   justify-content: space-between; /* Space between logo and menu */
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1000;
+  padding: 40px 20px;
+  height: 200px;
 }
 
+.brand-name {
+  font-family: 'Tangerine', cursive;
+  font-size: 64px;
+  color: black;
+  text-transform: lowercase;
+}
+.brand-name .est .subtext {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #d29fc7;
+}
 /* Logo styling */
 .main-navbar .logo {
   display: flex;
