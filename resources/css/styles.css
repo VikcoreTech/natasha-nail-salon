@@ -1149,3 +1149,134 @@ footer {
   height: 100%;
   border: none;
 }
+
+/* Contact Section */
+.contact-section {
+  padding: 20px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Add space between the form and the map */
+}
+
+/* Contact Form */
+.contact-container {
+  width: 100%; /* Full width */
+  height: 50vh; /* Set a consistent height */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add space between form elements */
+  height: 100%; /* Ensure the form fills the container */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #b0296b;
+}
+
+/* Google Map */
+.map-container {
+  width: 100%; /* Full width */
+  height: 50vh; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  overflow: hidden; /* Ensure the map fits within the container */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Optional: Light background */
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #b0296b;
+}
+
+/* Google Map Section */
+.map-section {
+  padding: 40px 20px;
+  background-color: #fff; /* Optional: Different background color */
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto; /* Center the map */
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
