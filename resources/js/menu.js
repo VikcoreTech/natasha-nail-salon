@@ -16,9 +16,6 @@ var $cont = document.querySelector('.cont');
 var $elsArr = [].slice.call(document.querySelectorAll('.el'));
 var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
-setTimeout(function() {
-  $cont.classList.remove('s--inactive');
-}, 200);
 
 $elsArr.forEach(function($el) {
   $el.addEventListener('click', function() {
@@ -73,12 +70,3 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-const aboutMePicture = document.querySelector('.about-me-picture');
-
-// Remove any dynamically added classes
-aboutMePicture.classList.remove('highlight');
-
-// Remove any event listeners (if applicable)
-aboutMePicture.onmouseover = null;
-aboutMePicture.onmouseout = null;
