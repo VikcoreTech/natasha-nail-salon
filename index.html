@@ -58,12 +58,9 @@
   </div>
 
   <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="about-image">
-      <img src="./resources/css/images/natasha.jpg" alt="About Me">
-    </div>
-    <div class="about-text">
-      <h2 class="about">About Me</h2>
+  <section class="two-column">
+    <div class="column">
+      <h2>About Me</h2>
       <p>
         With over a decade of experience and international training, Natasha brings the art of the Russian manicure to her clients with precision and care. Her attention to detail and passion for perfection have made her salon one of the most trusted in the area.
       </p>
@@ -71,7 +68,11 @@
         Whether you're looking for a natural look or something bold, Natasha customizes each service to meet your style and needs.
       </p>
     </div>
+    <div class="column">
+      <img src="./resources/css/images/natasha.jpg" alt="About Me">
+    </div>
   </section>
+
   <!-- Carousel Section -->
   <div class="carousel-container">
     <div class="carousel-track">
@@ -102,58 +103,6 @@
       navMenu.classList.toggle('show');
     }
 
-    let homepageSlideIndex = 0;
-    showHomepageSlides();
-
-    function showHomepageSlides() {
-      const slides = document.querySelectorAll(".homepage-slide");
-      const dots = document.querySelectorAll(".homepage-dot");
-      slides.forEach((slide) => (slide.style.display = "none"));
-      dots.forEach((dot) => dot.classList.remove("active"));
-      homepageSlideIndex++;
-      if (homepageSlideIndex > slides.length) homepageSlideIndex = 1;
-      slides[homepageSlideIndex - 1].style.display = "block";
-      dots[homepageSlideIndex - 1].classList.add("active");
-      setTimeout(showHomepageSlides, 3000); // Change slide every 3 seconds
-    }
-
-    function currentHomepageSlide(n) {
-      homepageSlideIndex = n - 1;
-      showHomepageSlides();
-    }
-  </script>
-
-  <script>
-    let currentSlideIndex = 0;
-
-    function updateSlides() {
-      const slides = document.querySelectorAll(".slide");
-      slides.forEach((slide, index) => {
-        slide.classList.remove("active", "prev", "next");
-        if (index === currentSlideIndex) {
-          slide.classList.add("active");
-        } else if (index === (currentSlideIndex - 1 + slides.length) % slides.length) {
-          slide.classList.add("prev");
-        } else if (index === (currentSlideIndex + 1) % slides.length) {
-          slide.classList.add("next");
-        }
-      });
-    }
-
-    function showNextSlide() {
-      const slides = document.querySelectorAll(".slide");
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      updateSlides();
-    }
-
-    function showPrevSlide() {
-      const slides = document.querySelectorAll(".slide");
-      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-      updateSlides();
-    }
-  </script>
-
-  <script>
     let currentIndex = 0;
 
     function moveCarousel(direction) {
@@ -166,9 +115,9 @@
 
       // Wrap around if the index goes out of bounds
       if (currentIndex < 0) {
-        currentIndex = totalSlides - 3; // Show the last 3 slides
-      } else if (currentIndex > totalSlides - 3) {
-        currentIndex = 0; // Reset to the first slide
+        currentIndex = totalSlides - 1;
+      } else if (currentIndex >= totalSlides) {
+        currentIndex = 0;
       }
 
       // Move the track
@@ -176,21 +125,18 @@
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
   </script>
+  <script src="./resources/js/menu.js"></script>
 
 </body>
 <footer>
   <div class="footer-content">
-    <!-- Left Section: Logo and Description -->
     <div class="footer-section footer-logo">
       <a href="index.html" class="logo">
-        <div class="est">EST | 2025</div>
         <div class="brand-name">ALF NAILS ART</div>
+        <div class="est">EST | 2025</div>
         <div class="subtext">PROFESSIONAL<br>NAIL ART</div>
       </a>
-      </p>
     </div>
-
-    <!-- Right Section: Location -->
     <div class="footer-section footer-location">
       <h3 class="footer-title">Our Location</h3>
       <p><i class="fa fa-map-marker"></i> 4200 N Lamar Blvd, Suite 150, Austin, TX, 78556</p>
@@ -198,7 +144,6 @@
       <p><i class="fa fa-clock-o"></i> Mon - Sat 09:00am - 06:00pm</p>
     </div>
   </div>
-
   <p class="footer-copyright">
     &copy; 2025 Alf Nails Art. All rights reserved.
   </p>
