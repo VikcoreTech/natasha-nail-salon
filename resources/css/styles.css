@@ -1289,3 +1289,9 @@ footer {
   height: 100%;
   border: none;
 }
+.para-about {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
