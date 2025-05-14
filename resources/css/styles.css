@@ -30,13 +30,24 @@ img {
 
 /* ===== TOP BAR ===== */
 .top-bar {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  font-size: 14px;
+  background-color: black; /* Black background for the bar */
+  color: white; /* White text/icons */
+  height: 40px; /* Small height for the bar */
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center; /* Center vertically */
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.top-bar a {
+  color: white; /* Ensure icons are white */
+  margin-left: 15px; /* Add spacing between icons */
+  font-size: 1.2rem; /* Adjust icon size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.top-bar a:hover {
+  color: #d29fc7; /* Light pink hover effect */
 }
 
 .logo-branding {
