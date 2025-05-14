@@ -558,25 +558,6 @@ footer {
   align-items: center;
 }
 
-.disclaimer-title, .h2 {
-  font-size: 1.5rem; /* Match the heading size in the picture */
-  color: #d29fc7; /* Light pink color for the heading */
-  font-weight: bold;
-  font-family: 'Tangerine', cursive; /* Keep the cursive font */
-  text-align: left; /* Align the heading to the left */
-  margin-bottom: 10px; /* Add spacing below the heading */
-}
-
-.disclaimer-title, .p {
-  font-size: 1rem; /* Match the paragraph size in the picture */
-  color: black; /* Black color for the text */
-  font-weight: normal; /* Use normal font weight for the paragraph */
-  font-family: sans-serif; /* Keep the sans-serif font */
-  text-align: left; /* Align the text to the left */
-  line-height: 1.6; /* Improve readability with proper line spacing */
-  margin-top: 5px; /* Add spacing above the paragraph */
-}
-
 .slide {
   position: absolute;
   width: 80%; /* Adjust the width of the slides */
@@ -1656,7 +1637,7 @@ footer {
 .disclaimer-title {
   text-align: left;
   margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #d29fc7;
   font-weight: bold;
   font-family: 'Tangerine', cursive;
@@ -1664,7 +1645,7 @@ footer {
 
 /* Target the p inside the disclaimer div */
 .disclaimer p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
   font-weight: 1000;
   font-family: sans-serif;
