@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* adjust based on nav height */
 }
 
 /* ===== BASE STYLES ===== */
@@ -42,6 +42,29 @@ img {
   align-items: center;
   width: 50vh;
   height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .brand-name {
+    font-size: 2rem;
+  }
+
+  .brand-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .logo-branding {
+    width: 80vw;
+    height: auto;
+  }
 }
 .top-left,
 .top-right {
@@ -231,83 +254,21 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-.footer-content {
+.footer-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 2rem;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 250px;
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
-.footer-logo {
-  text-align: left; /* Align the content to the left */
-  display: flex;
-  flex-direction: column; /* Stack the elements vertically */
-  align-items: flex-start; /* Align all child elements to the left */
-}
-
-.footer-logo .est,
-.footer-logo .subtext {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.footer-logo .brand-name {
-  font-family: 'Tangerine', cursive;
-  font-size: 42px;
-  color: white;
-  font-weight: bold;
-  text-transform: lowercase;
-  margin-bottom: 10px;
-}
-
-.footer-description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ccc;
-}
-
-.footer-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.footer-location p {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.footer-location i {
-  margin-right: 10px;
-  color: #d29fc7;
-}
-
-.footer-copyright {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  color: #ccc;
-}
-
-.footer-section a {
-  display: block;
-  margin: 5px 0;
-}
-
-.footer-section .location {
-  font-weight: bold;
-}
 /* Default hidden state for the mobile menu */
 .nav-links {
   display: none;
@@ -841,25 +802,59 @@ footer {
 }
 
 /* ===== Two-Column Layout ===== */
-.two-column {
+.about-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
-  background-color: rgb(247, 203, 227);
+  background-color: #fcd0e2; /* Light pink */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
 }
 
-.about-me-picture {
-  width: 100vh;
-  height: 100vh;
-}
-
-.two-column img {
+.about-img {
   width: 100%;
-  height: 75vh;
-  border-radius: 10px;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
 }
+
+.about-text {
+  color: #333;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #5b5b5b;
+}
+
+@media (min-width: 900px) {
+  .about-section {
+    flex-direction: row;
+  }
+
+  .about-img {
+    max-width: 50%;
+    margin-right: 2rem;
+  }
+
+  .about-text {
+    max-width: 50%;
+  }
+}
+
 
 /* ===== Dynamic Heading Sizes ===== */
 .dynamic-heading {
@@ -886,7 +881,9 @@ footer {
   max-width: 500px;
   width: 100%;
 }
-
+.container {
+  padding: 40px 20px;
+}
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
@@ -1294,4 +1291,77 @@ footer {
   line-height: 1.6;
   margin-bottom: 20px;
   font-weight: bold;
+}
+.burger-menu {
+  display: none;
+}
+
+/* ... Keep all your existing styles untouched ... */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .off-screen-menu {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .logo-branding {
+    width: 80vw;
+    height: auto;
+  }
+
+  .card-container,
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .footer-container {
+    gap: 1rem;
+  }
 }
