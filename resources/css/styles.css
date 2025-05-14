@@ -858,7 +858,6 @@ footer {
   }
 }
 
-
 /* ===== Dynamic Heading Sizes ===== */
 .dynamic-heading {
   font-size: clamp(1.5rem, 5vw, 3rem); /* Adjusts between 1.5rem and 3rem based on viewport width */
@@ -1464,4 +1463,54 @@ footer {
   justify-content: center; /* Center the image horizontally */
   position: relative; /* Ensure proper alignment */
   overflow: hidden; /* Prevent any overflow */
+}
+.about-section {
+    background-color: #ffe4e1; /* Light pink background */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align content */
+}
+
+.about-content {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.about-img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    margin-bottom: 20px; /* Space between the image and text */
+}
+
+.about-text {
+    text-align: left; /* Align text to the left for readability */
+    font-size: 1rem; /* Set a readable font size */
+    line-height: 1.6; /* Improve line spacing */
+    color: #333; /* Dark text for contrast */
+}
+
+.about-text h2 {
+    font-size: 2rem; /* Larger heading size */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #000; /* Bold black heading */
+}
+
+.about-text p {
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-content {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+
+    .about-text p {
+        font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+    }
 }
