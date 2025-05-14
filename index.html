@@ -27,28 +27,28 @@
   </div>
 
   <!-- Main Navbar -->
-<header>
-  <div class="main-navbar">
-    <div class="logo-branding">
-      <a href="index.html">
-        <img src="./resources/css/images/logo transparent.png" alt="Logo">
-      </a>
+  <header>
+    <div class="main-navbar">
+      <div class="logo-branding">
+        <a href="index.html">
+          <img src="./resources/css/images/logo transparent.png" alt="Logo">
+        </a>
+      </div>
+      <div class="ham-menu" id="hamMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="off-screen-menu" id="navMenu">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#about-text">About Me</a></li>
+          <li><a href="faq.html">FAQ / Policy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="ham-menu" id="hamMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="off-screen-menu" id="navMenu">
-      <ul>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="index.html#about-text">About Me</a></li>
-        <li><a href="faq.html">FAQ / Policy</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <!-- Hero Section -->
   <div class="full-width-image">
@@ -61,98 +61,100 @@
     </div>
   </div>
 
-<div id="about-text" class="about-section">
+  <!-- About Section -->
+  <div id="about-text" class="about-section">
     <div class="about-content">
-        <img src="./resources/css/images/natashanailtech.jpg" alt="Natasha doing nails" class="about-img" />
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>Hi, I’m Natasha, a passionate and inspired nail artist with a lifelong love for manicures. My journey began back in school, where I’d spend afternoons with my girlfriends, practicing on each other just for fun. With the support of my amazing mother, who gifted me my very first starter kit, my childhood hobby quickly turned into a growing passion.</p>
-            <p>Over the years, I dedicated myself to mastering the art of nail care. Through constant practice and professional training, I significantly refined my skills, specializing in high-precision techniques like the Russian Manicure.</p>
-            <p>After moving to the U.S., I explored different career paths, but nothing matched the creativity and joy I found in nail artistry. That spark never faded and eventually, I realized that my true calling had always been in the world of nails.</p>
-            <p>Today, I bring that same love, precision, and dedication to every client I work with. Let me share my passion with you and help your nails shine with beauty and perfection.</p>
-        </div>
+      <img src="./resources/css/images/natashanailtech.jpg" alt="Natasha doing nails" class="about-img" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hi, I’m Natasha, a passionate and inspired nail artist with a lifelong love for manicures. My journey began back in school, where I’d spend afternoons with my girlfriends, practicing on each other just for fun. With the support of my amazing mother, who gifted me my very first starter kit, my childhood hobby quickly turned into a growing passion.</p>
+        <p>Over the years, I dedicated myself to mastering the art of nail care. Through constant practice and professional training, I significantly refined my skills, specializing in high-precision techniques like the Russian Manicure.</p>
+        <p>After moving to the U.S., I explored different career paths, but nothing matched the creativity and joy I found in nail artistry. That spark never faded and eventually, I realized that my true calling had always been in the world of nails.</p>
+        <p>Today, I bring that same love, precision, and dedication to every client I work with. Let me share my passion with you and help your nails shine with beauty and perfection.</p>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- Fullscreen Modal -->
-<div class="modal" onclick="closeModal()">
-  <img class="modal-content" id="expanded-image" src="" alt="">
-</div>
+  <!-- Fullscreen Modal -->
+  <div class="modal" onclick="closeModal()">
+    <img class="modal-content" id="expanded-image" src="" alt="">
+  </div>
+
   <!-- Slideshow -->
-   <!-- Container for the image gallery -->
-<div class="container-slideshow1">
+  <div class="container-slideshow1">
+    <div class="slideshow-container">
+      <!-- Full-width slides -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="./resources/css/images/slide1.jpg" style="width:100%" alt="Slide 1">
+      </div>
 
-  <div class="slideshow-container">
-    <!-- Full-width slides -->
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
-      <img src="./resources/css/images/slide1.jpg" style="width:100%">
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="./resources/css/images/slide2.jpg" style="width:100%" alt="Slide 2">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="./resources/css/images/slide3.jpg" style="width:100%" alt="Slide 3">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="./resources/css/images/slide4.jpg" style="width:100%" alt="Slide 4">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="./resources/css/images/slide5.jpg" style="width:100%" alt="Slide 5">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="./resources/css/images/slide6.jpg" style="width:100%" alt="Slide 6">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
-      <img src="./resources/css/images/slide2.jpg" style="width:100%">
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Slide 1">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Slide 2">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Slide 3">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Slide 4">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Slide 5">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./resources/css/images/slide6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Slide 6">
+      </div>
     </div>
 
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
-      <img src="./resources/css/images/slide3.jpg" style="width:100%">
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
     </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-      <img src="./resources/css/images/slide4.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
-      <img src="./resources/css/images/slide5.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
-      <img src="./resources/css/images/slide6.jpg" style="width:100%">
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Slide 1">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Slide 2">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Slide 3">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Slide 4">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Slide 5">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./resources/css/images/slide6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Slide 6">
-    </div>
-  </div>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
   <script src="./resources/js/menu.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content"></div>
+    <p class="footer-copyright">
+      &copy; 2020 Alf Nails Art. All rights reserved.
+    </p>
+  </footer>
 </body>
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-  </div>
-  <p class="footer-copyright">
-    &copy; 2020 Alf Nails Art. All rights reserved.
-  </p>
-</footer>
 </html>
