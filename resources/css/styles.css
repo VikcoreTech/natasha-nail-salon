@@ -1,12 +1,12 @@
 /* ===== RESET ===== */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-padding-top: 80px; /* adjust based on nav height */
+  scroll-padding-top: 80px; /* Adjust based on nav height */
 }
 
 /* ===== BASE STYLES ===== */
@@ -38,11 +38,13 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .logo-branding {
   align-items: center;
   width: 50vh;
   height: 50vh;
 }
+
 @media screen and (max-width: 768px) {
   .brand-name {
     font-size: 2rem;
@@ -66,6 +68,7 @@ img {
     height: auto;
   }
 }
+
 .top-left,
 .top-right {
   display: flex;
@@ -73,10 +76,11 @@ img {
   gap: 15px;
   flex-wrap: wrap;
 }
-/* Navbar styling */
+
+/* ===== NAVBAR ===== */
 .main-navbar {
   display: flex;
-  justify-content: space-between; /* Space between logo and menu */
+  justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
   height: 200px;
@@ -88,21 +92,15 @@ img {
   color: black;
   text-transform: lowercase;
 }
+
 .brand-name .est .subtext {
   font-size: 14px;
   text-transform: uppercase;
   color: #d29fc7;
 }
-/* Logo styling */
-.main-navbar .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-/* Hamburger menu styling */
 .ham-menu {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -116,23 +114,8 @@ img {
   transition: all 0.3s ease;
 }
 
-.disclaimer-title h2 {
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 2.5rem; /* Adjust size if needed */
-  color: #d29fc7; /* Keep the existing color */
-  font-weight: bold;
-  font-family: 'Tangerine', cursive;
-}
-.disclaimer-title p {
-  font-size: 1.5rem; /* Adjust size if needed */
-  color: black; /* Keep the existing color */
-  font-weight: 1000;
-  font-family: sans-serif;
-}
-/* Off-screen menu styling for mobile */
 .off-screen-menu {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
   top: 60px;
   right: 20px;
@@ -144,12 +127,10 @@ img {
   border-radius: 8px;
 }
 
-/* Show the menu when the 'show' class is added */
 .off-screen-menu.show {
   display: block;
 }
 
-/* Menu items styling */
 .off-screen-menu ul {
   list-style: none;
   padding: 0;
@@ -171,53 +152,9 @@ img {
   color: #d29fc7;
 }
 
-/* Desktop view */
 @media (min-width: 768px) {
   .off-screen-menu {
-    display: flex; /* Show menu in desktop mode */
-    position: static; /* Remove absolute positioning */
-    background-color: transparent; /* Transparent background */
-    box-shadow: none; /* Remove shadow */
-    padding: 0; /* Remove padding */
-    width: auto; /* Auto width */
-  }
-
-  .off-screen-menu ul {
-    display: flex; /* Horizontal layout for menu items */
-    gap: 20px; /* Space between menu items */
-  }
-
-  .off-screen-menu ul li {
-    margin-bottom: 0;
-  }
-
-  .ham-menu {
-    display: none; /* Hide hamburger menu in desktop mode */
-  }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .ham-menu {
-    display: flex; /* Show hamburger menu on small screens */
-  }
-
-  .off-screen-menu {
-    display: none; /* Hide the full navbar by default */
-  }
-
-  .main-navbar nav {
-    display: none; /* Hide the full navbar */
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .ham-menu {
-    display: none; /* Hide hamburger menu on larger screens */
-  }
-
-  .off-screen-menu {
-    display: flex; /* Show full navbar on larger screens */
+    display: flex;
     position: static;
     background-color: transparent;
     box-shadow: none;
@@ -228,6 +165,28 @@ img {
   .off-screen-menu ul {
     display: flex;
     gap: 20px;
+  }
+
+  .off-screen-menu ul li {
+    margin-bottom: 0;
+  }
+
+  .ham-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ham-menu {
+    display: flex;
+  }
+
+  .off-screen-menu {
+    display: none;
+  }
+
+  .main-navbar nav {
+    display: none;
   }
 }
 
@@ -242,9 +201,9 @@ img {
 
 .full-width-image img {
   width: 100%;
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Scale the image while maintaining its aspect ratio */
-  object-position: center; /* Center the image within the container */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-text {
@@ -255,22 +214,22 @@ img {
   text-align: center;
   color: white;
   font-family: sans-serif;
-  
   padding: 10px;
 }
+
 .hero-text h1 {
-  font-size: 2.5rem; /* Default size for smaller screens */
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .hero-text h4 {
-  font-size: 1.5rem; /* Default size for smaller screens */
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .hero-text h3 {
-  font-size: 1rem; /* Default size for smaller screens */
+  font-size: 1rem;
   margin-bottom: 10px;
   font-family: 'Tangerine', cursive;
 }
@@ -280,18 +239,17 @@ img {
   margin-bottom: 20px;
 }
 
-/* Responsive Design */
 @media screen and (min-width: 768px) {
   .hero-text h4 {
-    font-size: 2rem; /* Larger size for desktop */
+    font-size: 2rem;
   }
 
   .hero-text h3 {
-    font-size: 2.5rem; /* Larger size for desktop */
+    font-size: 2.5rem;
   }
 
   .hero-text h1 {
-    font-size: 3.5rem; /* Larger size for desktop */
+    font-size: 3.5rem;
   }
 }
 
@@ -311,7 +269,6 @@ img {
   background-color: #b28aa6;
 }
 
-/* Responsive Design */
 @media screen and (min-width: 768px) {
   .cta-button {
     font-size: 1.2rem;
@@ -326,23 +283,22 @@ footer {
   padding: 10px 20px;
   font-size: 14px;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  text-align: center; /* Ensure text alignment is centered */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between; /* Space between items */
+  justify-content: space-between;
   align-items: center;
-  gap: 15px; /* Add spacing between items */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -389,6 +345,7 @@ footer {
     display: none;
   }
 }
+
 .manicure-showcase {
   display: flex;
   gap: 30px;
@@ -429,6 +386,7 @@ footer {
   padding: 0 15px 20px;
   color: #555;
 }
+
 .about-section {
   display: flex;
   flex-wrap: wrap;
@@ -593,12 +551,13 @@ footer {
   position: relative;
   max-width: 100%;
   width: 100%;
-  margin: auto;
+  margin: 40px auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .disclaimer-title, .h2 {
   font-size: 1.5rem; /* Match the heading size in the picture */
   color: #d29fc7; /* Light pink color for the heading */
@@ -607,6 +566,7 @@ footer {
   text-align: left; /* Align the heading to the left */
   margin-bottom: 10px; /* Add spacing below the heading */
 }
+
 .disclaimer-title, .p {
   font-size: 1rem; /* Match the paragraph size in the picture */
   color: black; /* Black color for the text */
@@ -616,6 +576,7 @@ footer {
   line-height: 1.6; /* Improve readability with proper line spacing */
   margin-top: 5px; /* Add spacing above the paragraph */
 }
+
 .slide {
   position: absolute;
   width: 80%; /* Adjust the width of the slides */
@@ -831,6 +792,7 @@ footer {
 .services-dot.active {
   background-color: #d29fc7;
 }
+
 /* ===== HERO IMAGE ===== */
 .selection-image {
   position: relative;
@@ -842,37 +804,38 @@ footer {
 
 .selection-image img {
   width: 100%;
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Ensures the image scales proportionally and fills the container */
-  object-position: center; /* Centers the image within the container */
-  image-rendering: auto; /* Ensures the image is rendered smoothly */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
 }
+
 /* Gallery Container */
 .gallery-container {
-  display: flex; /* Use flexbox to align items in a row */
-  justify-content: space-between; /* Add space between items */
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
-  gap: 10px; /* Add spacing between items */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
   padding: 10px;
 }
 
 /* Gallery Items */
 .gallery-item {
-  flex: 0 0 auto; /* Prevent items from shrinking or growing */
-  width: 100px; /* Set a fixed width for each item */
-  height: 150px; /* Set a fixed height for each item */
-  overflow: hidden; /* Hide overflow if the image is larger */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  flex: 0 0 auto;
+  width: 100px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Gallery Images */
 .gallery-item img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Scale the image proportionally */
-  object-position: center; /* Center the image within the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Modal */
@@ -904,14 +867,14 @@ footer {
   background-color: #f9f9f9;
   color: #333;
   font-family: Arial, sans-serif;
-  text-align: center; /* Center all content */
+  text-align: center;
   line-height: 1.8;
 }
 
 .faq-title {
   font-size: 32px;
   font-weight: bold;
-  text-transform: uppercase; /* Capitalize all text */
+  text-transform: uppercase;
   margin-bottom: 40px;
   color: #d29fc7;
 }
@@ -923,13 +886,13 @@ footer {
 .faq-item h3 {
   font-size: 24px;
   font-weight: bold;
-  text-transform: uppercase; /* Capitalize all text */
+  text-transform: uppercase;
   color: #d29fc7;
   margin-bottom: 20px;
 }
 
 .faq-item ul {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none;
   padding: 0;
 }
 
@@ -937,19 +900,7 @@ footer {
   margin-bottom: 15px;
   color: #555;
   font-size: 16px;
-  text-transform: uppercase; /* Capitalize all text */
-}
-
-/* ===== Two-Column Layout ===== */
-.about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fcd0e2; /* Light pink */
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 800px;
-  margin: auto;
+  text-transform: uppercase;
 }
 
 .about-img {
@@ -980,10 +931,6 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .about-section {
-    flex-direction: row;
-  }
-
   .about-img {
     max-width: 50%;
     margin-right: 2rem;
@@ -996,7 +943,7 @@ footer {
 
 /* ===== Dynamic Heading Sizes ===== */
 .dynamic-heading {
-  font-size: clamp(1.5rem, 5vw, 3rem); /* Adjusts between 1.5rem and 3rem based on viewport width */
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: bold;
   color: #d29fc7;
   text-align: center;
@@ -1019,9 +966,11 @@ footer {
   max-width: 500px;
   width: 100%;
 }
+
 .container {
   padding: 40px 20px;
 }
+
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
@@ -1056,7 +1005,7 @@ footer {
 .slideshow-container {
   position: relative;
   max-width: 100%;
-  height: 50vh; /* Adjust height as needed */
+  height: 50vh;
   margin: auto;
   overflow: hidden;
 }
@@ -1068,9 +1017,9 @@ footer {
 
 /* Full-width images */
 .mySlides img {
-  width: 100%; /* Keep the width at 100% */
-  height: 100%; /* Adjust the height to fit the container */
-  object-fit: cover; /* Ensure the image scales proportionally and fills the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Next & previous buttons */
@@ -1087,21 +1036,21 @@ footer {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  z-index: 10; /* Ensure buttons are above the image */
+  z-index: 10;
 }
 
 .prev {
-  left: 10px; /* Position to the left of the image */
+  left: 10px;
   border-radius: 3px 0 0 3px;
 }
 
 .next {
-  right: 10px; /* Position to the right of the image */
+  right: 10px;
   border-radius: 0 3px 3px 0;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Add hover effect */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
@@ -1141,9 +1090,9 @@ footer {
 .column img {
   cursor: pointer;
   opacity: 0.6;
-  width: 80px; /* Adjust thumbnail size */
-  height: 60px; /* Adjust thumbnail size */
-  object-fit: cover; /* Ensure thumbnails scale proportionally */
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
 }
 
 .column img:hover {
@@ -1171,10 +1120,10 @@ footer {
 
 /* Ensure all images in .mySlides are the same size */
 .mySlides img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 70vh; /* Set a consistent height (adjust as needed) */
-  object-fit: cover; /* Scale the image proportionally and crop if necessary */
-  object-position: center; /* Center the image within the container */
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Thumbnail images */
@@ -1183,72 +1132,73 @@ footer {
   justify-content: center;
   margin-top: 10px;
 }
+
 /* Two-column layout */
 .two-column {
-  display: flex; /* Use Flexbox for layout */
-  align-items: center; /* Vertically align items */
-  gap: 20px; /* Add space between the columns */
-  padding: 20px; /* Add padding around the section */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Left column: Image */
 .image-column {
-  flex: 1; /* Take up equal space */
-  max-width: 50%; /* Limit the width to 50% */
+  flex: 1;
+  max-width: 50%;
 }
 
 .image-column img {
-  width: 100%; /* Make the image responsive */
-  height: 80vh; /* Maintain aspect ratio */
+  width: 100%;
+  height: 80vh;
 }
 
 /* Right column: Text */
 .text-column {
-  flex: 1; /* Take up equal space */
-  max-width: 50%; /* Limit the width to 50% */
+  flex: 1;
+  max-width: 50%;
 }
 
 .text-column h2 {
-  font-size: 2rem; /* Adjust heading size */
+  font-size: 2rem;
   margin-bottom: 15px;
-  color: #333; /* Text color */
+  color: #333;
 }
 
 .text-column p {
-  font-size: 1rem; /* Adjust paragraph size */
-  line-height: 1.6; /* Improve readability */
-  color: #555; /* Text color */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 /* Contact Section */
 .contact-section {
-  display: flex; /* Use Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 20vh; /* Full viewport height */
-  text-align: center; /* Center text alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  text-align: center;
 }
 
 .contact-h2 {
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .contact-wrapper {
-  display: flex; /* Use Flexbox for layout */
-  gap: 20px; /* Add space between the columns */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* Left Column: Contact Form */
 .contact-container {
-  flex: 1; /* Take up equal space */
-  max-width: 50%; /* Limit the width to 50% */
+  flex: 1;
+  max-width: 50%;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Add space between form elements */
+  gap: 15px;
 }
 
 .contact-form label {
@@ -1281,11 +1231,11 @@ footer {
 
 /* Right Column: Google Map */
 .map-container {
-  flex: 1; /* Take up equal space */
-  max-width: 50%; /* Limit the width to 50% */
-  height: 450px; /* Set a consistent height */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  overflow: hidden; /* Ensure the map fits within the container */
+  flex: 1;
+  max-width: 50%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .map-container iframe {
@@ -1301,21 +1251,21 @@ footer {
 
 .contact-wrapper {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 20px; /* Add space between the form and the map */
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Contact Form */
 .contact-container {
-  width: 100%; /* Full width */
-  height: 50vh; /* Set a consistent height */
+  width: 100%;
+  height: 50vh;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Add space between form elements */
-  height: 100%; /* Ensure the form fills the container */
+  gap: 15px;
+  height: 100%;
 }
 
 .contact-form input,
@@ -1343,10 +1293,10 @@ footer {
 
 /* Google Map */
 .map-container {
-  width: 100%; /* Full width */
-  height: 50vh; /* Set a consistent height */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  overflow: hidden; /* Ensure the map fits within the container */
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .map-container iframe {
@@ -1358,12 +1308,12 @@ footer {
 /* Contact Form Section */
 .contact-form-section {
   padding: 40px 20px;
-  background-color: #f9f9f9; /* Optional: Light background */
+  background-color: #f9f9f9;
 }
 
 .contact-container {
   max-width: 600px;
-  margin: 0 auto; /* Center the form */
+  margin: 0 auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -1407,12 +1357,12 @@ footer {
 /* Google Map Section */
 .map-section {
   padding: 40px 20px;
-  background-color: #fff; /* Optional: Different background color */
+  background-color: #fff;
 }
 
 .map-container {
   max-width: 800px;
-  margin: 0 auto; /* Center the map */
+  margin: 0 auto;
   height: 450px;
   border-radius: 10px;
   overflow: hidden;
@@ -1424,12 +1374,14 @@ footer {
   height: 100%;
   border: none;
 }
+
 .para-about {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
   font-weight: bold;
 }
+
 .burger-menu {
   display: none;
 }
@@ -1451,23 +1403,25 @@ footer {
     display: flex;
   }
 }
+
 .hero {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    position: relative; /* Ensure positioning is relative to the container */
-    width: 100%; /* Full width of the container */
-    height: 400px; /* Adjust height as needed */
-    overflow: hidden; /* Prevent overflow */
-    background-color: #f5f5f5; /* Optional: Add a background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: #f5f5f5;
 }
 
 .hero img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Scale the image proportionally and fill the container */
-    object-position: center; /* Center the image within the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
+
 .connect-info {
   text-align: center;
   padding: 60px 20px;
@@ -1481,149 +1435,149 @@ footer {
 
 /* Social Section */
 .social-section {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Align items vertically */
-    padding: 40px 20px;
-    background-color: #f5f5f5;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
 }
 
 .social-content {
-    display: flex;
-    gap: 40px; /* Space between images and text */
-    align-items: center; /* Align images and text vertically */
-    flex-wrap: wrap; /* Wrap content on smaller screens */
-    max-width: 1200px; /* Limit the width for better readability */
-    margin: 0 auto; /* Center the content */
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .boxes {
-    display: flex;
-    gap: 20px; /* Space between the images */
-    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-    justify-content: center; /* Center images on smaller screens */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .boxes img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Add hover effect */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .boxes img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
 .social-text {
-    max-width: 400px; /* Limit the width of the text section */
-    text-align: center; /* Center-align text on smaller screens */
+  max-width: 400px;
+  text-align: center;
 }
 
 .social-text h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .social-text p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #333;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
 }
 
 .icons {
-    display: flex;
-    justify-content: center; /* Center icons */
-    gap: 15px; /* Space between icons */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .icons a {
-    font-size: 1.5rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .icons a:hover {
-    color: #0077ff; /* Change color on hover */
+  color: #0077ff;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .social-content {
-        flex-direction: column; /* Stack images and text vertically */
-        text-align: center; /* Center-align text */
-    }
+  .social-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .boxes {
-        justify-content: center; /* Center images on mobile */
-    }
+  .boxes {
+    justify-content: center;
+  }
 
-    .social-text {
-        margin-top: 20px; /* Add spacing between images and text */
-    }
+  .social-text {
+    margin-top: 20px;
+  }
 
-    .social-text h1 {
-        font-size: 1.5rem; /* Adjust heading size for mobile */
-    }
+  .social-text h1 {
+    font-size: 1.5rem;
+  }
 
-    .social-text p {
-        font-size: 0.9rem; /* Adjust paragraph font size for mobile */
-    }
+  .social-text p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Bottom-Right Social Media Icons */
 .social-icons-bottom-right {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    gap: 15px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons-bottom-right a {
-    font-size: 1.5em;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-size: 1.5em;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-icons-bottom-right a:hover {
-    color: #0077ff;
+  color: #0077ff;
 }
 
 .icon-circles {
   display: flex;
-  justify-content: center; /* Center the circles horizontally */
-  gap: 40px; /* Space between the circles */
+  justify-content: center;
+  gap: 40px;
   margin-top: 30px;
-  text-align: center; /* Ensure text alignment is consistent */
+  text-align: center;
 }
 
 .icon-text {
   display: flex;
-  flex-direction: column; /* Stack the circle and text vertically */
-  align-items: center; /* Center-align the circle and text */
+  flex-direction: column;
+  align-items: center;
 }
 
 .circle {
-  width: 100px; /* Circle size */
+  width: 100px;
   height: 100px;
   background-color: #d29fc7;
   border-radius: 50%;
   display: flex;
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
-  position: relative; /* Ensure proper alignment */
-  overflow: hidden; /* Prevent any overflow */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .circle img {
-  width: 60%; /* Adjust size of the image */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image scales proportionally */
+  width: 60%;
+  height: auto;
+  object-fit: contain;
   top: 500px;
   left: 500px;
 }
@@ -1632,67 +1586,69 @@ footer {
   font-size: 16px;
   font-weight: bold;
   color: #d29fc7;
-  margin-top: 10px; /* Add spacing between the circle and text */
-  text-align: center; /* Center-align the text */
+  margin-top: 10px;
+  text-align: center;
 }
+
 #phone, #email, #location {
   display: flex;
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
-  position: relative; /* Ensure proper alignment */
-  overflow: hidden; /* Prevent any overflow */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
+
 .about-section {
-  background-color: #ffe4e1; /* Light pink background */
-  padding: 40px 20px; /* Add padding for spacing */
-  text-align: center; /* Center-align content */
-  width: 100%; /* Ensure the background spans the entire width */
-  box-sizing: border-box; /* Include padding in the width calculation */
+  background-color: #ffe4e1;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-content {
-  max-width: 1200px; /* Limit the content width for readability */
-  margin: 0 auto; /* Center the content */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-img {
-  width: 100%; /* Make the image responsive */
-  max-width: 400px; /* Limit the maximum width of the image */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Add rounded corners */
-  margin-bottom: 20px; /* Space between the image and text */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .about-text {
-  text-align: left; /* Align text to the left for readability */
-  font-size: 1rem; /* Set a readable font size */
-  line-height: 1.6; /* Improve line spacing */
-  color: #333; /* Dark text for contrast */
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .about-text h2 {
-  font-size: 2rem; /* Larger heading size */
-  margin-bottom: 20px; /* Space below the heading */
-  color: black; /* Light pink color for the heading */
-  font-family: 'Tangerine', cursive; /* Apply the Tangerine font */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Tangerine', cursive;
 }
 
 .about-text p {
-  margin-bottom: 15px; /* Space between paragraphs */
+  margin-bottom: 15px;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .about-content {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 20px;
   }
 
   .about-text h2 {
-    font-size: 1.5rem; /* Adjust heading size for mobile */
+    font-size: 1.5rem;
   }
 
   .about-text p {
-    font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+    font-size: 0.9rem;
   }
 }
 
@@ -1700,16 +1656,16 @@ footer {
 .disclaimer-title {
   text-align: left;
   margin-bottom: 10px;
-  font-size: 2.5rem; /* Adjust size if needed */
-  color: #d29fc7; /* Keep the existing color */
+  font-size: 2.5rem;
+  color: #d29fc7;
   font-weight: bold;
   font-family: 'Tangerine', cursive;
 }
 
 /* Target the p inside the disclaimer div */
 .disclaimer p {
-  font-size: 1.5rem; /* Adjust size if needed */
-  color: black; /* Keep the existing color */
+  font-size: 1.5rem;
+  color: black;
   font-weight: 1000;
   font-family: sans-serif;
 }
