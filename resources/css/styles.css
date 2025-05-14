@@ -252,9 +252,11 @@ footer {
   color: white;
   padding: 10px 20px;
   font-size: 14px;
+  text-align: center; /* Center-align the text */
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
 }
 
 .footer-container {
@@ -1346,21 +1348,27 @@ footer {
 /* Social Section */
 .social-section {
     display: flex;
-    justify-content: center; /* Center the entire section horizontally */
+    justify-content: center; /* Center the content horizontally */
     align-items: center; /* Align items vertically */
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #ffffff;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .social-content {
     display: flex;
-    gap: 40px; /* Space between the images and text */
+    gap: 40px; /* Space between images and text */
     align-items: center; /* Align images and text vertically */
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    max-width: 1200px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
 }
 
 .boxes {
     display: flex;
     gap: 20px; /* Space between the images */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    justify-content: center; /* Center images on smaller screens */
 }
 
 .boxes img {
@@ -1368,32 +1376,68 @@ footer {
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.boxes img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .social-text {
     max-width: 400px; /* Limit the width of the text section */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center-align text on smaller screens */
 }
 
 .social-text h1 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .social-text p {
     margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    justify-content: center; /* Center icons */
+    gap: 15px; /* Space between icons */
 }
 
 .icons a {
-    font-size: 2em;
-    margin-right: 15px;
+    font-size: 1.5rem;
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .icons a:hover {
-    color: #0077ff;
+    color: #0077ff; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .social-content {
+        flex-direction: column; /* Stack images and text vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .boxes {
+        justify-content: center; /* Center images on mobile */
+    }
+
+    .social-text {
+        margin-top: 20px; /* Add spacing between images and text */
+    }
+
+    .social-text h1 {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+
+    .social-text p {
+        font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+    }
 }
 
 /* Bottom-Right Social Media Icons */
