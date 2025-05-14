@@ -102,7 +102,7 @@ img {
 
 /* Hamburger menu styling */
 .ham-menu {
-  display: flex;
+  display: none; /* Hidden by default */
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -118,7 +118,7 @@ img {
 
 /* Off-screen menu styling for mobile */
 .off-screen-menu {
-  display: none;
+  display: none; /* Hidden by default */
   position: absolute;
   top: 60px;
   right: 20px;
@@ -181,6 +181,42 @@ img {
     display: none; /* Hide hamburger menu in desktop mode */
   }
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .ham-menu {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+
+  .off-screen-menu {
+    display: none; /* Hide the full navbar by default */
+  }
+
+  .main-navbar nav {
+    display: none; /* Hide the full navbar */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .ham-menu {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+
+  .off-screen-menu {
+    display: flex; /* Show full navbar on larger screens */
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .off-screen-menu ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+
 /* ===== HERO IMAGE ===== */
 .full-width-image {
   position: relative;
@@ -275,11 +311,19 @@ footer {
   color: white;
   padding: 10px 20px;
   font-size: 14px;
-  text-align: center; /* Center-align the text */
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
-  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  text-align: center; /* Ensure text alignment is centered */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center;
+  gap: 15px; /* Add spacing between items */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .footer-container {
